@@ -10,7 +10,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -32,7 +31,7 @@ def get_filters():
 
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input('Please Enter the Day of the Week :').lower() # Taking the user input
+    day = input('Please Enter the Day of the Week :').lower()
     while day not in ['all','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
         day = input(' Kindly enter a day between monday, tuesday, wednesday , thursday , friday , saturday , and sunday : ').lower()
  
@@ -44,7 +43,6 @@ def get_filters():
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -52,9 +50,9 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    data = pd.read_csv('{}.csv'.format(city))
-    data['Start Time'] = pd.to_datetime(data['Start Time'])
-    data['End Time'] = pd.to_datetime(data['End Time'])
+    data = pd.read_csv('{}.csv'.format(city)) # Reading the CSV file 
+    data['Start Time'] = pd.to_datetime(data['Start Time']) # Turning the start time into datetime form
+    data['End Time'] = pd.to_datetime(data['End Time']) # Turning the End time into datetime form
     
     # we need to get the month from the start time so we need to use dt.month
     data['month'] = data['Start Time'].dt.month
@@ -209,7 +207,7 @@ def user_stats(data , city):
     
     
 def raw_data (data):
-    
+    # creating a loop to enable the user to choose whether to see the row data or not
     answer = 'yes'
     x = 0
     while ( answer != 'no'):
@@ -237,4 +235,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main() # This is the end of the project 
+	main() # This is the end of the project
