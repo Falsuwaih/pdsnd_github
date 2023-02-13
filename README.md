@@ -10,7 +10,7 @@ Post your Work on GitHub
 By using git, we will be refactoring our previous Bikeshare project.
 
 ### Files used
-The Files used are:
+The Files used here are:
 - Git Commands Documentation.pdf
 
 ### Credits
