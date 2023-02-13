@@ -10,11 +10,13 @@ Post your Work on GitHub
 By using git, we will be refactoring our previous Bikeshare project.
 
 ### Files used
+
 The Files used here are:
 - Git Commands Documentation.pdf
 
+
 ### Credits
-https://www.geeksforgeeks.org/working-on-git-bash/ 
 
+https://www.geeksforgeeks.org/working-on-git-bash/
+This website is usful 
 
- This website is usful
