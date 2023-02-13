@@ -53,7 +53,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     data = pd.read_csv('{}.csv'.format(city)) # Reading the CSV file 
-    data['Start Time'] = pd.to_datetime(data['Start Time'])
+    data['Start Time'] = pd.to_datetime(data['Start Time']) # Turning the start time into datetime form
     data['End Time'] = pd.to_datetime(data['End Time'])
     
     # we need to get the month from the start time so we need to use dt.month
