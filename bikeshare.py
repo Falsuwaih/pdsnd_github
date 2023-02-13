@@ -54,7 +54,7 @@ def load_data(city, month, day):
     """
     data = pd.read_csv('{}.csv'.format(city)) # Reading the CSV file 
     data['Start Time'] = pd.to_datetime(data['Start Time']) # Turning the start time into datetime form
-    data['End Time'] = pd.to_datetime(data['End Time'])
+    data['End Time'] = pd.to_datetime(data['End Time']) # Turning the End time into datetime form
     
     # we need to get the month from the start time so we need to use dt.month
     data['month'] = data['Start Time'].dt.month
@@ -209,7 +209,7 @@ def user_stats(data , city):
     
     
 def raw_data (data):
-    
+    # creating a loop to enable the user to choose whether to see the row data or not
     answer = 'yes'
     x = 0
     while ( answer != 'no'):
